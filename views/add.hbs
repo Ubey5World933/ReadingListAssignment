@@ -1,0 +1,36 @@
+<!-- 
+  ADD BOOK FORM 
+  This form allows users to add a new book to their reading list. 
+  It uses a POST request to send book details to the server.
+-->
+
+<h1>Add a New Book</h1>
+
+<form action="/add" method="POST">
+  <!-- Input field for book title -->
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title" required>
+  </div>
+
+  <!-- Input field for author name -->
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="author" name="author" required>
+  </div>
+
+  <!-- Input field for book cost -->
+  <div class="mb-3">
+    <label for="cost" class="form-label">Cost</label>
+    <input type="number" class="form-control" id="cost" name="cost" step="0.01" required>
+  </div>
+
+  <!-- Input field for shopping URL -->
+  <div class="mb-3">
+    <label for="shoppingUrl" class="form-label">Shopping URL</label>
+    <input type="url" class="form-control" id="shoppingUrl" name="shoppingUrl" required>
+  </div>
+
+  <!-- Submit button to add book -->
+  <button type="submit" class="shadow__btn">Add Book</button>
+</form>

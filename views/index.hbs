@@ -1,0 +1,28 @@
+<!-- 
+  BOOK LIST 
+  Displays a collection of books in a grid layout. 
+  If no books are available, a message prompts the user to add one.
+-->
+
+<h1>My To-Read List</h1>
+
+<div class="card-container">
+  {{#if books.length}}
+    {{#each books}}
+      <!-- Card for each book -->
+      <div class="card">
+        <div class="card-details">
+          <p class="text-title">{{this.title}}</p>
+          <p class="text-body">Author: {{this.author}}</p>
+          <p class="text-body">Cost: ${{this.cost}}</p>
+        </div>
+
+        <!-- Link to view book details -->
+        <a href="/book/{{this.id}}" class="card-button">More Info</a>
+      </div>
+    {{/each}}
+  {{else}}
+    <!-- Displayed when no books are available -->
+    <p>No books added yet. <a href="/add">Add a book!</a></p>
+  {{/if}}
+</div>

@@ -1,0 +1,25 @@
+<!-- 
+  VIEW BOOK DETAILS 
+  This page displays detailed information about a specific book. 
+  It provides options to edit, delete, or navigate back to the book list.
+-->
+
+<h1>{{book.title}}</h1>
+<p>Author: {{book.author}}</p>
+<p>Cost: ${{book.cost}}</p>
+
+<!-- Link to purchase the book -->
+<a href="{{book.shoppingUrl}}" class="shadow__btn" target="_blank">Buy Now</a>
+
+<br><br>
+
+<!-- Button to edit book details -->
+<a href="/edit/{{book.id}}" class="btn btn-secondary">Edit</a>
+
+<!-- Form to delete the book -->
+<form action="/delete/{{book.id}}" method="POST" style="display: inline;">
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<!-- Button to return to the book list -->
+<a href="/" class="btn btn-primary">Back to List</a>

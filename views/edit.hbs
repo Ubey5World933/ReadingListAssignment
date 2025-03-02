@@ -1,0 +1,36 @@
+<!-- 
+  EDIT BOOK FORM 
+  This form allows users to update the details of an existing book. 
+  The form is pre-filled with the current book data.
+-->
+
+<h1>Edit Book</h1>
+
+<form action="/edit/{{book.id}}" method="POST">
+  <!-- Input field for book title (pre-filled with current value) -->
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title" value="{{book.title}}" required>
+  </div>
+
+  <!-- Input field for author name (pre-filled with current value) -->
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="author" name="author" value="{{book.author}}" required>
+  </div>
+
+  <!-- Input field for book cost (pre-filled with current value) -->
+  <div class="mb-3">
+    <label for="cost" class="form-label">Cost</label>
+    <input type="number" class="form-control" id="cost" name="cost" value="{{book.cost}}" step="0.01" required>
+  </div>
+
+  <!-- Input field for shopping URL (pre-filled with current value) -->
+  <div class="mb-3">
+    <label for="shoppingUrl" class="form-label">Shopping URL</label>
+    <input type="url" class="form-control" id="shoppingUrl" name="shoppingUrl" value="{{book.shoppingUrl}}" required>
+  </div>
+
+  <!-- Submit button to update book details -->
+  <button type="submit" class="btn btn-primary">Update Book</button>
+</form>
